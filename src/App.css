@@ -1,0 +1,87 @@
+#root {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(10, 10, 10);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  margin: auto;
+  text-align: center;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 3px;
+  animation-duration: 1s;
+  user-select: none;
+  z-index: 1;
+}
+
+button :active {
+  background-color: red;
+}
+
+.snowflake-wrapper {
+  animation-fill-mode: forwards;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  z-index: 0.5;
+  animation-duration: 1.5s;
+}
+
+.button :focus {
+  background-color: white;
+}
+
+.snowflake {
+  width: inherit;
+  height: inherit;
+  position: inherit;
+}
+
+.background-snowflake {
+  filter: blur(10px);
+  display: none;
+  position: inherit;
+}
+
+@keyframes fall-1 {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(200px) rotate(250deg);
+    width: 10px;
+    opacity: 0;
+  }
+}
+
+@keyframes fall-2 {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(200px) rotate(-160deg);
+    width: 10px;
+    opacity: 0;
+  }
+}
+
+@keyframes fall-3 {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(150px) rotate(340deg);
+    width: 10px;
+    opacity: 0;
+  }
+}
